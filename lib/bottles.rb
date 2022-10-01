@@ -7,11 +7,7 @@ class Bottles
   end
 
   def verses(n1, n2)
-    result = []
-    [*n1.downto(n2)].each do |n|
-      result << verse(n)
-    end
-    result.join("\n")
+    [*n1.downto(n2)].map { |n| verse(n) }.join("\n")
   end
 
   def song
