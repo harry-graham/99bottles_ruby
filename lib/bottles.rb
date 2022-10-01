@@ -6,6 +6,10 @@ class Bottles
     "#{subject(n-1)} of beer on the wall.\n"
   end
 
+  def verses(n1, n2)
+    verse(n1) + "\n" + verse(n2)
+  end
+
   private
 
   def subject(n)
