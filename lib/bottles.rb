@@ -1,8 +1,8 @@
 class Bottles
   def verse(n)
-    "#{subject(n)} of beer on the wall, " +
+    "#{subject(n).capitalize} of beer on the wall, " +
     "#{subject(n)} of beer.\n" +
-    "Take #{n == 1 ? "it" : "one"} down and pass it around, " +
+    "#{action_statement(n)}, " +
     "#{subject(n-1)} of beer on the wall.\n"
   end
 
@@ -10,9 +10,18 @@ class Bottles
 
   def subject(n)
     case n
+    when -1 then "99 bottles"
     when 0 then "no more bottles"
     when 1 then "1 bottle"
     else "#{n} bottles"
+    end
+  end
+
+  def action_statement(n)
+    case n
+    when 0 then "Go to the store and buy some more"
+    when 1 then "Take it down and pass it around"
+    else "Take one down and pass it around"
     end
   end
 end
