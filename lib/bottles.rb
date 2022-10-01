@@ -14,6 +14,10 @@ class Bottles
     result.join("\n")
   end
 
+  def song
+    verses(99, 0)
+  end
+
   private
 
   def subject(n)
